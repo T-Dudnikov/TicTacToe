@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<head>
+
+	<!-- <meta name="" content=""> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- include CSS -->
+	<link rel="stylesheet" type="text/css" href="~/css/tic1.css">
+
+	<!-- include JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="~/js/tic1.js"></script>
+</head>
+
+<body>
+	<div id="main">
+		<h1>TIC TAC TOE</h1>
+
+		<!-- Game Instructions -->
+		<p id="ins">
+			Game starts by just Tap on
+			box<br><br>First Player starts as
+			<b>Player X</b><br>And<br>Second
+			Player as <b>Player 0</b>
+		</p>
+
+
+
+
+		<br><br>
+		<!-- 3*3 grid of Boxes -->
+		<input type="text" id="box1" onclick="myfunc_1(); get_jquery();" readonly>
+
+		<input type="text" id="box2" onclick="myfunc_2(); get_jquery();" readonly>
+
+		<input type="text" id="box3" onclick="myfunc_3(); get_jquery();" readonly>
+		<br><br>
+
+		<input type="text" id="box4" onclick="myfunc_4(); get_jquery();" readonly>
+
+		<input type="text" id="box5" onclick="myfunc_5(); get_jquery();" readonly>
+
+		<input type="text" id="box6" onclick="myfunc_6(); get_jquery();" readonly>
+		<br><br>
+
+		<input type="text" id="box7" onclick="myfunc_7(); get_jquery();" readonly>
+
+		<input type="text" id="box8" onclick="myfunc_8(); get_jquery();" readonly>
+
+		<input type="text" id="box9" onclick="myfunc_9(); get_jquery();" readonly>
+
+		<!-- Grid end here  -->
+		<br><br><br>
+		<!-- Button to reset game -->
+		<button id="boxreset" onclick="myfunc_reset();">
+			RESET
+		</button>
+
+		<br><br>
+		<!-- Space to show player turn -->
+		<p id="print"></p>
+
+	</div>
+</body>

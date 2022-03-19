@@ -1,0 +1,64 @@
+﻿/* CSS Code */
+/* Heading */
+h1 {
+	color: orangered;
+	font-size: 45px;
+}
+
+/* 3*3 Grid */
+#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9 {
+	/*ширина*/
+	width: 80px;
+	/*высота*/
+	height: 52px;
+	/*отступ от границ, auto - равный отступ*/
+	margin: auto;
+	/*граница кнопки, ширина и цвет*/
+	border: 1px solid gray;
+	/*скругление углов границы*/
+	/*top left, top right, bottom right, bottom left*/
+	border-radius: 6px 0px 0px 0px;
+	/*размер шрифта*/
+	font-size: 30px;
+	/*расположение возможного текста*/
+	text-align: center;
+}
+
+/* Reset Button */
+#boxreset {
+	/**/
+	box-sizing: border-box;
+	width: 95px;
+	height: 40px;
+	border: 1px solid dodgerblue;
+	margin: auto;
+	border-radius: 4px;
+	/**/
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	/**/
+	background-color: dodgerblue;
+	/**/
+	color: white;
+	font-size: 20px;
+	/**/
+	cursor: pointer;
+}
+
+/* Player turn space */
+#print {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: dodgerblue;
+	font-size: 20px;
+}
+
+/* Main Container */
+#main {
+	text-align: center;
+}
+
+/* Game Instruction Text */
+#ins {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: dodgerblue;
+	font-size: 17px;
+}
