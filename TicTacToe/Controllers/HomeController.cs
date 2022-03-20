@@ -15,15 +15,15 @@ namespace TicTacToe
     {
         // GET: /<controller>/
         readonly string connectionString = "Server=localhost;Database=master;Trusted_Connection=True;";
-        int globalId = 1;
+
         public IActionResult Index()
         {
             return View("Index");
         }
 
-        public IActionResult InnerLogic(string allData)
+        public IActionResult InnerLogic(string allData, Int64 myid)
         {
-            int myid = allData[0] - '0'; //char to int
+            //int myid = allData[0] - '0'; //char to int
             int[] box = new int[9];
             for (int i = 0; i < 9; ++i) {
                 switch (allData[i + 1])
@@ -38,7 +38,7 @@ namespace TicTacToe
                         box[i] = 0;
                         break;
                     default:
-                        box[i] = -1;
+                        box[i] = -3;
                         break;
                 }
             }
@@ -93,10 +93,12 @@ namespace TicTacToe
                     win = 0;
                     result_str = "Match tie";
                 }
-                //Match not finished.
 
+                //Match not finished.
                 if (win >= 0)
                 {
+                    Console.WriteLine(myid);
+                    //Console.Read();
                     dynamic cmdQuery = db.Query<dynamic>(string.Format("INSERT INTO master.[dbo].[MovesTicTacToe] values ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11});",
                         myid, box[0], box[1], box[2], box[3], box[4], box[5], box[6], box[7], box[8], myflag, win));
                 }
@@ -127,5 +129,6 @@ namespace TicTacToe
             }
                 return Ok();
         }
+
     }
 }

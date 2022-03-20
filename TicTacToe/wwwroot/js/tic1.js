@@ -1,6 +1,8 @@
-﻿id = 1;
-// Нужно научиться работать с id, увеличивать его каждое открытие окна.
-// В этом может помочь $(document).ready
+﻿var id = 1;
+$(document).ready(function () {
+    id = Date.now();
+    window.alert(id);
+});
 
 // Function to reset game
 function myfunc_reset() {
@@ -11,7 +13,6 @@ function myfunc_reset() {
     }
     document.getElementById('print').value = '';
     flag = 1;
-    id += 1;
 }
 
 // Function called whenever user tab on any box
@@ -21,9 +22,10 @@ function get_jquery() {
         box[i] = document.getElementById("box" + i).value;
     }
     var mybody = {
-        allData: ""
-    }
-    mybody.allData += id;
+        allData: "",
+        myid: id
+    };
+    mybody.allData += " ";          // Здесь был id, но он стал быть однозначным.
     for (let i = 1; i <= 9; i++) {
         mybody.allData += (box[i] != '') ? box[i] : 'n';
     }
